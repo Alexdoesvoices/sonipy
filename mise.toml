@@ -1,0 +1,15 @@
+[tools]
+python = "3.14"
+uv = "latest"
+
+[task_config]
+includes = [".mise/tasks/*.toml"]
+
+[settings]
+python.uv_venv_auto = "source"
+
+[env]
+_.python.venv = ".venv"
+
+[hooks]
+enter = ["echo Run 'mise run sync' after pulling to make sure all packages and tools are on the correct versions!!!"]

@@ -1,0 +1,27 @@
+[build]
+confirm = { message = "Are you sure you want to compile the program?", default = "no"}
+description = "Compile the project into a runable .exe"
+run = [
+    "uv run pyinstaller --name sonipy --onefile src/sonipy/__init__.py"
+]
+
+[dev]
+description = "Run the codebase"
+run = [
+	"uv run dev"
+]
+
+[sync]
+description = "Sync up Tool and Packages."
+run = [
+    "mise install",
+    "uv venv --clear",
+    "uv sync --reinstall"
+]
+
+
+[upgrade]
+description = "Update uv packages"
+run = [
+	"uv sync --upgrade"
+]
