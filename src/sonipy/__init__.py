@@ -1,5 +1,8 @@
+from sonipy.window import window_built
+
+
 def main() -> None:
-    print("Hello from sonipy!")
+    window_built()
 
 
 if __name__ == "__main__":
