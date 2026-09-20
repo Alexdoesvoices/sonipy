@@ -1,16 +1,23 @@
-import tkinter as tk
+import sys
 
-root = tk.Tk()
+from PySide6.QtCore import QSize, Qt
+from PySide6.QtWidgets import QApplication, QMainWindow, QPushButton
 
-def window_configs():
-    root.title("Sonipy")
-    root.configure(bg="#1c1b22")
-    root.minsize(720, 480)
-    root.maxsize(1920, 1080)
-    
 
-    
+class MainWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
 
-def window_built():
-    window_configs() 
-    root.mainloop()
+        self.setWindowTitle("Sonipy")
+        self.resize(720,480)
+        # self.setWindowOpacity(0.5)
+
+
+
+app = QApplication(sys.argv)
+
+window = MainWindow()
+window.show()
+
+def AppWindow():
+    app.exec()

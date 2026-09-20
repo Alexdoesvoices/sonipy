@@ -1,8 +1,8 @@
-from sonipy.window import window_built
+from sonipy.window import AppWindow
 
 
 def main() -> None:
-    window_built()
+    AppWindow()
 
 
 if __name__ == "__main__":
